@@ -1,0 +1,49 @@
+
+ol {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    overflow: hidden;
+    list-style-position: inside;
+}
+
+li {
+    text-transform: capitalize;
+}
+
+li:nth-child(even) {
+    background: #90c2f7;
+  }
+
+img {
+    width: 10%;
+    height: 10%;
+}
+h3 {
+    text-transform: capitalize;
+}
+
+a {
+    color: #007bff !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+  @media only screen and (max-width: 400px) {
+    ol {
+        -webkit-column-count:1;
+        -moz-column-count: 1;
+        column-count: 1;
+        overflow: hidden;
+    }
+  }

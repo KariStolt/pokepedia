@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Poképedia</title>
+</head>
+<body>
+  <div class="text-center">
+    <h1>Poképedia</h1>
+    <h3 id="name">pokemonin nimi: </h3>
+    <img id="sprite" src="" alt="kuva">
+    <p id="id">numero: </p>
+    <p id="type">tyyppi: </p>
+    <div class="row d-flex justify-content-center mb-3">
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="input-group">
+          <input id="pokemonName" type="text" class="form-control" placeholder="Pokemon">
+          <span class="input-group-btn">
+            <button class="btn btn-outline-primary" type="button" id="searchButton">Etsi</button><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#tyyppiModal">Tyypit</button>
+          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#pokemonListaModal" onclick="fetchPokemonList()">Näytä kaikki pokemonit</button>
+  </div>
+  
+    <div class="modal fade" id="pokemonListaModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-center">Kaikki Pokemonit</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <ol id="pokemon-modal-text" data-dismiss="modal">&times;</ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
+        <div class="modal fade" id="tyyppiModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Tyypit</h4></div>
+                <div class="modal-body text-center">
+                  <div class="mb-3">
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"onclick="pokemonTypes('fire')">Fire</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"onclick="pokemonTypes('water')">Water</button>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal"onclick="pokemonTypes('grass')">Grass</button>
+                    <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"onclick="pokemonTypes('electric')">Electric</button>
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal"onclick="pokemonTypes('flying')">Flying</button>
+                  </div>
+                  <ol id="type-modal-text" data-dismiss="modal">&times;</ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</body>
+<script src="script.js"></script>
+</html>
